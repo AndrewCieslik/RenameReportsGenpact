@@ -12,7 +12,6 @@ public class RenameReports {
         }
         return postfixMRDR;
     }
-
     public String newName(String plant, String name) {
         String mrdr = "";
         int postfixMRDR = findIndexOfPostfix(name);
@@ -21,7 +20,6 @@ public class RenameReports {
             }
         String newName = mrdr + "_" + plant + "_" + name;
             return newName;
-
     }
 
     public static void main(String args[]) throws IOException {
@@ -42,10 +40,9 @@ public class RenameReports {
             System.out.println(" ");
             System.out.println("Name length: " + file.getName().length());
 
-            if(file.getName().contains("_S") && file.getName().length() > 12) { //including ".zip":)
+            if(file.getName().contains("_S") && file.getName().length() > 11) { //including ".zip":)
                 String newName = rename.newName(plant, file.getName());
                 System.out.println("New name: " + newName);
-
                 File newFile = new File("./reports/" + newName);
 
                 if (file.renameTo(newFile)) {
