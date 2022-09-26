@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RenameReports:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RenameReports_jar</output-path>
+    <root id="archive" name="RenameReports.jar">
+      <element id="module-output" name="RenameReports" />
+    </root>
+  </artifact>
+</component>

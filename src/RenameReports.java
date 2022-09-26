@@ -15,7 +15,7 @@ public class RenameReports {
     public String newName(String plant, String name) {
         String mrdr = "";
         int postfixMRDR = findIndexOfPostfix(name);
-            for (int index = 6; index > 0; index--) {    //read mrdr number before "_S"
+            for (int index = 8; index > 0; index--) {    //read mrdr number before "_S"
                 mrdr += String.valueOf(name.charAt(postfixMRDR - index));
             }
         String newName = mrdr + "_" + plant + "_" + name;
@@ -40,7 +40,7 @@ public class RenameReports {
             System.out.println(" ");
             System.out.println("Name length: " + file.getName().length());
 
-            if(file.getName().contains("_S") && file.getName().length() > 11) { //including ".zip":)
+            if(file.getName().contains("_S") && file.getName().length() > 13) { //including ".zip":)
                 String newName = rename.newName(plant, file.getName());
                 System.out.println("New name: " + newName);
                 File newFile = new File("./reports/" + newName);
